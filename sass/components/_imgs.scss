@@ -1,0 +1,25 @@
+.product-image {
+  @include for-phone-only {
+    width: 249.62px;
+    height: 329.58px;
+    left: 27px;
+    top: 73.66px;
+    background: url(/imgs/NJORD-fiskeolie\-2.png);
+  }
+
+  @include for-tablet-portrait-up {
+    // position: absolute;
+    // width: 585.23px;
+    // height: 713.74px;
+    // left: 456px;
+    // top: 66px;
+    left: 0%;
+    right: 16.79%;
+    top: 11.11%;
+    bottom: -1.2%;
+    background: url(/imgs/NJORD-fiskeolie-1.png);
+  }
+
+  position: absolute;
+  transform: rotate(-9.37deg);
+}
