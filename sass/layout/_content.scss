@@ -1,0 +1,230 @@
+@use "../base/vars" as *;
+
+.content {
+  height: 150%;
+  background: $lightgrey;
+}
+
+.grid-project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-project2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.copytext {
+  font-family: "Gilroy-light";
+  line-height: 2em;
+}
+
+.text-box,
+.text-box2 {
+  h1 {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    color: $coral;
+  }
+  h3 {
+    font-family: "Gilroy-bold";
+    font-size: 1.5em;
+
+    .dot {
+      font-size: 1.5em;
+      color: $coral;
+    }
+  }
+  .copytext {
+    color: $textcolor;
+    font-size: 0.9em;
+    padding-bottom: 2em;
+  }
+  .italictext {
+    font-family: "Libre-Baskerville-italic";
+    font-size: 0.9em;
+  }
+  .linktext,
+  .linktext:visited {
+    color: $dark;
+  }
+}
+
+.project1 {
+  .text-box {
+    padding-top: 3em;
+    padding-left: 6em;
+    order: 1;
+    margin-right: 6em;
+  }
+  .image-box {
+    position: relative;
+    order: 2;
+  }
+  .parallex-image {
+    width: 40%;
+    position: absolute;
+    top: 55%;
+    right: 200px;
+  }
+}
+
+.project2 {
+  h1 {
+    padding-left: 1em;
+  }
+  .text-box {
+    order: 2;
+    padding-top: 8em;
+    padding-left: 7em;
+    padding-right: 6em;
+  }
+  .image-box {
+    position: relative;
+    order: 1;
+  }
+  .parallex-image {
+    width: 50%;
+    position: absolute;
+    top: 85%;
+    left: 30%;
+  }
+}
+
+.project3 {
+  padding-top: 17em;
+
+  h1 {
+    margin-left: 1.5em;
+    margin-top: -0.1em;
+    color: $coral;
+  }
+  .text-box {
+    text-align: end;
+    margin-right: 3em;
+  }
+
+  .parallex-image {
+    width: 50%;
+    // position: absolute;
+    top: 70%;
+    left: 27%;
+    right: 9 0px !important;
+  }
+}
+
+.project4 {
+  padding-top: 17em;
+  .text-box {
+    order: 2;
+    margin-left: 5em;
+    margin-right: 3em;
+  }
+  .image-box {
+    order: 1;
+  }
+  .parallex-image {
+    width: 20%;
+    position: absolute;
+    top: 85%;
+    left: 20%;
+  }
+  h1 {
+    color: $dark;
+  }
+  h3 {
+    .dot {
+      color: $yellow;
+    }
+  }
+}
+
+.project5 {
+  background: rgb(248, 248, 248);
+  background: linear-gradient(180deg, rgba(248, 248, 248, 1) 0%, rgba(28, 27, 32, 1) 55%);
+  margin-top: -6em;
+  padding-top: 16em;
+  padding-bottom: 5em;
+  .text-box {
+    order: 1;
+    padding-top: 1em;
+    padding-left: 6em;
+  }
+  h1 {
+    color: $yellow;
+  }
+  h3 {
+    color: white;
+  }
+
+  .text-box2 {
+    order: 2;
+    // padding-top: 3em;
+    // padding-left: 6em;
+    margin-right: 4em;
+    .copytext {
+      color: rgb(214, 214, 214);
+    }
+  }
+  .image-box {
+    position: relative;
+    order: 3;
+    .linktext {
+      position: relative;
+      top: 80%;
+    }
+    .italictext {
+      font-family: "Libre-Baskerville-italic";
+      font-size: 0.9em;
+      color: white;
+    }
+  }
+  .parallex-image {
+    width: 50%;
+    position: absolute;
+    top: 25%;
+    right: 110px;
+  }
+}
+
+////Styling hover link
+.background-slide {
+  color: #3588b4;
+  position: relative;
+  padding-bottom: 2px;
+  z-index: 3;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    height: 2px;
+    background-color: #6ebde7;
+    width: 0%;
+    display: block;
+    transition: width 0.5s ease-in-out;
+    background: rgba(255, 85, 75, 0.2);
+    height: 0.75em;
+    z-index: -1;
+  }
+  &:hover {
+    color: black;
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+.datalink {
+  text-decoration: none !important;
+}
+
+// section {
+//   opacity: 0;
+//   transition: opacity 3s;
+// }
+
+// section.is-visible {
+//   opacity: 1;
+// }
